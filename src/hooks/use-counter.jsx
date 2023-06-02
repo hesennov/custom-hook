@@ -16,11 +16,15 @@ export default function useCounter() {
       return null;
     }
   };
+  const isPositive = count > 0;
+  const isNegative = count < 0;
 
   return {
     count,
     increment,
     decrement,
     NegativeContent,
+    isPositive,
+    isNegative,
   };
 }
